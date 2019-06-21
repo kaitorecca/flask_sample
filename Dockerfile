@@ -6,9 +6,9 @@ RUN apt update && apt install -y libsm6 libxext6
 RUN apt-get -y install tesseract-ocr
 COPY . /app
 WORKDIR /app
-RUN pip install pillow
-RUN pip install pytesseract
-RUN pip install opencv-contrib-python
-RUN pip install -r requirements.txt
+RUN pip3 install pillow
+RUN pip3 install pytesseract
+RUN pip3 install opencv-contrib-python
+RUN pip3 install -r requirements.txt
 ENTRYPOINT ["python"]
 CMD ["service.py"]
